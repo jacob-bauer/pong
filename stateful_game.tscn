@@ -7,7 +7,6 @@
 
 [node name="StatefulGame" type="Node"]
 script = ExtResource("1_jvffh")
-ball_maximum_speed = null
 
 [node name="Field" parent="." instance=ExtResource("1_yqtde")]
 collision_layer = 3
