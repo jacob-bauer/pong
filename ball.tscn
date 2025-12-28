@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://de78u6sepvyir"]
+
+[ext_resource type="Script" uid="uid://cjau8psnsg63b" path="res://ball.gd" id="1_x8fbi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbx31"]
+size = Vector2(40, 40)
+
+[node name="Ball" type="RigidBody2D"]
+physics_interpolation_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_x8fbi")
+gravity_scale = 0.0
+lock_rotation = true
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 2
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_x8fbi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_cbx31")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

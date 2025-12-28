@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8dwasstwbju8"]
+
+[ext_resource type="Script" uid="uid://ban3n1mk5c668" path="res://field.gd" id="1_0cutk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cutk"]
+size = Vector2(2048, 1208)
+
+[node name="Field" type="StaticBody2D"]
+script = ExtResource("1_0cutk")
+
+[node name="Walls" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 1920, 0, 1920, 1080, 0, 1080, 0, 1064, 1904, 1064, 1904, 16, 0, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -64, 1984, -64, 1984, 1144, 0, 1144, 0, 1064, 1904, 1064, 1904, 16, 0, 16)
+
+[node name="Center" type="Marker2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="OutOfBounds" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBounds"]
+position = Vector2(960, 540)
+shape = SubResource("RectangleShape2D_0cutk")
+
+[connection signal="body_exited" from="OutOfBounds" to="." method="_on_out_of_bounds_body_exited"]

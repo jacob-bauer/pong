@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://qk8e0oxsgljf"]
+
+[ext_resource type="Script" uid="uid://co680evxpoxuy" path="res://stateful_game.gd" id="1_jvffh"]
+[ext_resource type="PackedScene" uid="uid://c8dwasstwbju8" path="res://field.tscn" id="1_yqtde"]
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="2_jvffh"]
+[ext_resource type="PackedScene" uid="uid://xhrbej3ty1jw" path="res://hud.tscn" id="3_iy7r6"]
+
+[node name="StatefulGame" type="Node"]
+script = ExtResource("1_jvffh")
+ball_maximum_speed = null
+
+[node name="Field" parent="." instance=ExtResource("1_yqtde")]
+collision_layer = 3
+
+[node name="Paddle" parent="." instance=ExtResource("2_jvffh")]
+collision_mask = 2
+
+[node name="Hud" parent="." instance=ExtResource("3_iy7r6")]

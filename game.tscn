@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://da8nnse7hu2wu"]
+
+[ext_resource type="PackedScene" uid="uid://c8dwasstwbju8" path="res://field.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://n8887871nlgx" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://xhrbej3ty1jw" path="res://hud.tscn" id="4_fc0e3"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_feb5d")
+
+[node name="Field" parent="." instance=ExtResource("1_80nbo")]
+collision_layer = 3
+
+[node name="Paddle" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(0, 384)
+collision_mask = 2
+
+[node name="Hud" parent="." instance=ExtResource("4_fc0e3")]
+
+[connection signal="ball_exited" from="Field" to="." method="_on_field_ball_exited"]
