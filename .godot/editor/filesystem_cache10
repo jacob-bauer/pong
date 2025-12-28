@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1766963704
+::res://::1766964939
 ball.gd::GDScript::5405815047454403237::1766437533::0::1::::<>RigidBody2D<><>0<>0<><>::
 ball.tscn::PackedScene::7508118546633710873::1766437576::0::1::::<><><>0<>0<><>::uid://cjau8psnsg63b::::res://ball.gd
 field.gd::GDScript::2414982270253419371::1766389764::0::1::::<>Node2D<><>0<>0<><>::
@@ -13,11 +13,3 @@ paddle.tscn::PackedScene::9215302184394215274::1766432353::0::1::::<><><>0<>0<><
 stateful_game.gd::GDScript::5821529437903354908::1766522523::0::1::::GameWithState<>Node<><>0<>0<><>::
 stateful_game.tscn::PackedScene::1145677415466361875::1766963572::0::1::::<><><>0<>0<><>::uid://co680evxpoxuy::::res://stateful_game.gd<>uid://c8dwasstwbju8::::res://field.tscn<>uid://d4j7xe1qi3tfu::::res://paddle.tscn<>uid://xhrbej3ty1jw::::res://hud.tscn
 states.gd::GDScript::6815306862862809040::1766532697::0::1::::<>RefCounted<><>0<>0<><>::
-::res://addons/::1766963499
-::res://addons/godot-git-plugin/::1766963499
-git_plugin.gdextension::GDExtension::2096123082948767655::1766963499::0::1::::<><><>0<>0<><>::
-plugin.cfg::TextFile::-1::1766963499::0::1::::<><><>0<>0<><>::
-THIRDPARTY.md::TextFile::-1::1766963499::0::1::::<><><>0<>0<><>::
-::res://addons/godot-git-plugin/linux/::1766963499
-::res://addons/godot-git-plugin/macos/::1766963499
-::res://addons/godot-git-plugin/win64/::1766963499
